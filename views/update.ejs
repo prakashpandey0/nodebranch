@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <% include ../views/partials/head %>
+  </head>
+  <body class="container">
+    <header>
+        <% include ../views/partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+          <form method="post" action="/update">
+
+              Enter Your Name <input type="text" name="fname" value="<%= users[0].name%>"/>
+              Enter Your Age <input type="text" name="age" value="<%= users[0].age %>"/>
+                              <input type="hidden" name="id" value="<%= users[0]._id%>"/>
+              <input type="submit">
+          </form>
+        </div>
+
+    </main>
+
+    <footer>
+
+      <% include ../views/partials/footer %>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <% include ../views/partials/head %>
+  </head>
+  <body class="container">
+    <header>
+        <% include ../views/partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+          <form method="post" action="/create" class="form-group">
+              Enter Your Name <input type="text" name="fname" />
+              Enter Your Age <input type="text" name="age"/>
+              <input type="submit">
+          </form>
+        </div>
+
+    </main>
+
+    <footer>
+
+      <% include ../views/partials/footer %>
+    </footer>
+
+  </body>
+</html>

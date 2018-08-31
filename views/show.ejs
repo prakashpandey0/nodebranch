@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <% include ../views/partials/head %>
+  </head>
+  <body class="container">
+    <header>
+        <% include ../views/partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+          <table class="table">
+              <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th style="text-align:center">Action</th>
+              </tr>
+                <% for(let i = 0 ; i< users.length ; i++) { %>
+                  <tr>
+
+                      <td><%= users[i].name%></td>
+                      <td><%= users[i].age%></td>
+                      <td><a class="btn btn-danger "href="/delete/<%= users[i]._id%>">DELETE</a></td>
+                      <td><a class="btn btn-success" href="/update/<%= users[i]._id%>">UPDATE</a></td>
+                  </tr>
+               <% } %>
+          </table>
+        </div>
+
+    </main>
+
+    <footer>
+
+      <% include ../views/partials/footer %>
+    </footer>
+
+  </body>
+</html>
